@@ -1,0 +1,121 @@
+3.#include<stdio.h>
+#include<conio.h>
+#include<process.h>
+#include<process.h>
+void split(int[], int, int);
+void combine(int[], int, int, int);
+void main( )
+{
+{
+int a[20], i, n;
+clrscr();
+printf("\n enter the no. ofelements:\t");
+scanf("%d", &n);
+printf("\n enter the elements:\n");
+for(i=0;i<=n-1;i++)
+{
+int a[20], i, n;
+clrscr( );
+printf("\n enter the no. of elements:\t");
+scanf("%d", &n);
+printf("\n enter the elements:\n");
+for(i=0;i<=n-1;i++)
+{
+scanf("%d", &a[i]);
+}
+scanf("%d", &al[i]);
+}
+split(a, 0, n-1);
+split(a, 0, n-1);
+printf("\n the sorted array is:\n");
+for(i=0;i<=n-1;i++)
+{
+printf("\n the sorted array is:\n");
+for(i=0;i<=n-1;i++)
+{
+printf("%d\t",a[i]);
+}
+printf("%d\t",a[il});
+}
+getch( );
+}
+getch();
+}
+void split(int a[], int low, int high)
+{
+int mid;
+int mid;
+ifdow<high)
+{
+if(low<high)
+{
+mid=(low+high)/2;
+split(a,low,mid);
+split(a,mid+1,high);
+combine(a,low,mid,high);
+}
+}
+mid=(low+thigh)/2;
+split(a,low,mid);
+split(a,mid+1,high);
+combine(a,low,mid,high);
+}
+}
+void combine(int a[], int low, int mid, int high)
+{
+int c[20],i,j,k;
+i=k=low;
+j=mid+1;
+while(i<=mid&&j<=high)
+{
+while(i<=mid&&j<=high)
+{
+«2alil<alj])
+{
+if(a[i]<a[j])
+{
+void combine(int a[], int low, int mid, int high)
+{
+‘ant L[20],1,j,k;
+i=k=low;
+i=mid+1;
+void split(int a[], int low, int high)
+{
+void split(int[], int, int);
+void combine(int[], int, int, int);
+void main()
+
+c[k]=a[i];
+++k;
+++i;
+}
+else
+{
+c[k]=a[j];
+++k;
+++j;
+}
+}
+if(i>mid)
+{
+while(j<=high)
+{
+c[k]=a[j];
+++k;
+++j;
+}
+}
+if(j>high)
+{
+while(i<=mid)
+{
+c[k]=a[i];
+++k;
+++i;
+}
+}
+for(i=low;i<=high;i++)
+{
+a[i]=c[i];
+}
+}
