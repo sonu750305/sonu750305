@@ -1,4 +1,4 @@
-​1.#include<stdio.h>
+​#include<stdio.h>
 #include<conio.h>
 
 
@@ -11,12 +11,7 @@ void bfs(int);
 void main( )
 {
     int i, j, src;
-
-
-    clrscr( );
-
-
-    printf("\n enter the no of nodes:\t");
+printf("\n enter the no of nodes:\t");
     scanf("%d", &n);
 
 
