@@ -1,4 +1,4 @@
-​2.#include<stdio.h>
+​#include<stdio.h>
 #include<conio.h>
 const int MAX = 10;
 void fnTopological(int a[MAX][MAX], int n);
