@@ -42,9 +42,6 @@ if(strcmp(f, dir.fname[i])==0)
 {
 printf("File %s is found ", f);
 break;
-
-
-
 }
 }
 if(i==dir.fcnt)
@@ -60,6 +57,7 @@ printf("\t%s",dir.fname[i]);
 }
 break;
 default: exit (0);
-}}
+}
+}
 getch();
 }
