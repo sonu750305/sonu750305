@@ -1,29 +1,13 @@
 ﻿6) Sort a given set of elements using Heap Sort algorithm and determine the time
-taken 
+taken to sort the elements. Repeat the experiment for different values of n, the number of elements in the list to be sorted and plot a graph of the time taken versus n.
 
- 
-to sort the elements. Repeat the experiment for different values of n, the 
-number of 
-
- 
-elements in the list to be sorted and plot a graph of the time taken versus n. 
-
- 
-PROGRAM: 
-
- 
 #include<stdio.h> 
-
 #include<conio.h> 
- 
 void build_heap(int[], int); 
 void heapify(int[], int, int); 
 void heap_sort(int[], int); 
- 
 void main() 
 { 
-
- 
 int a[10],i,n; 
 clrscr(); 
 printf("\n enter the no. of elements:\t"); 
@@ -31,8 +15,6 @@ scanf("%d", &n); 
 printf("\n enter the elements:\n"); 
 for(i=0; i<=n-1; i++) 
 { 
-
- 
 scanf("%d", &a[i]); 
 } 
  
