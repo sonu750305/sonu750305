@@ -25,6 +25,8 @@ void main() {
     for(i = 0; i < n - 1; i++)
         printf("%d -> %d\t\t%d\n", t[i], t[i+1], tohm[i]);
 
-    printf("\nAverage header movement: %.2f", avhm);
+    printf("\nTotal head movements: %d", tot);
+    printf("\nAverage head movement: %.2f", avhm);
+
     getch();
 }
