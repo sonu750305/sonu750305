@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include<conio.h>
+
+struct process {
+    int pid, bt, wt, tt;
+} p[10], temp;
+
+void main() {
+    int i, j, n, totwt = 0, tottt = 0;
+    float avgwt, avgtt;
+    clrscr();
+
+    printf("Enter the number of processes: ");
+    scanf("%d", &n);
+
+    for(i = 0; i < n; i++) {
+        p[i].pid = i + 1;
+        printf("Enter burst time for process %d: ", p[i].pid);
+        scanf("%d", &p[i].bt);
+    }
+
+    // Sort by burst time
+    for(i = 0; i < n - 1; i++) {
+        for(j = i + 1; j < n; j++) {
+            if(p[i].bt > p[j].bt) {
+                temp = p[i];
+                p[i] = p[j];
+                p[j] = temp;
+            }
+        }
+    }
+
+    p[0].wt = 0;
+    p[0].tt = p[0].bt;
+
+    for(i = 1; i < n; i++) {
+        p[i].wt = p[i-1].wt + p[i-1].bt;
+        p[i].tt = p[i].wt + p[i].bt;
+    }
+
+    printf("\nPID\tBT\tWT\tTT");
+    for(i = 0; i < n; i++) {
+        printf("\nP%d\t%d\t%d\t%d", p[i].pid, p[i].bt, p[i].wt, p[i].tt);
+        totwt += p[i].wt;
+        tottt += p[i].tt;
+    }
+
+    avgwt = (float)totwt / n;
+    avgtt = (float)tottt / n;
+    printf("\nAverage Waiting Time = %.2f", avgwt);
+    printf("\nAverage Turnaround Time = %.2f", avgtt);
+
+    getch();
+}
