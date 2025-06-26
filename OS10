@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+
+void main() {
+    int t[20], n, i, tohm[20], tot = 0;
+    float avhm;
+    clrscr();
+
+    printf("Enter the number of tracks: ");
+    scanf("%d", &n);
+
+    printf("Enter the tracks to be traversed: ");
+    for(i = 0; i < n; i++)
+        scanf("%d", &t[i]);
+
+    for(i = 0; i < n - 1; i++) {
+        tohm[i] = abs(t[i+1] - t[i]);
+        tot += tohm[i];
+    }
+
+    avhm = (float)tot / (n - 1);
+
+    printf("Track traversed\tDifference\n");
+    for(i = 0; i < n - 1; i++)
+        printf("%d -> %d\t\t%d\n", t[i], t[i+1], tohm[i]);
+
+    printf("\nAverage header movement: %.2f", avhm);
+    getch();
+}
